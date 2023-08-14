@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\My_Task.Client.csproj": {}
+    "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Client\\My_Task.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\My_Task.Client.csproj": {
+    "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Client\\My_Task.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\My_Task.Client.csproj",
+        "projectUniqueName": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Client\\My_Task.Client.csproj",
         "projectName": "My_Task.Client",
-        "projectPath": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\My_Task.Client.csproj",
+        "projectPath": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Client\\My_Task.Client.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\obj\\",
+        "outputPath": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HELLO\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\HELLO\\My_Task\\My_Task\\Shared\\My_Task.Shared.csproj": {
-                "projectPath": "C:\\Users\\HELLO\\My_Task\\My_Task\\Shared\\My_Task.Shared.csproj"
+              "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Shared\\My_Task.Shared.csproj": {
+                "projectPath": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Shared\\My_Task.Shared.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\HELLO\\My_Task\\My_Task\\Shared\\My_Task.Shared.csproj": {
+    "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Shared\\My_Task.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HELLO\\My_Task\\My_Task\\Shared\\My_Task.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Shared\\My_Task.Shared.csproj",
         "projectName": "My_Task.Shared",
-        "projectPath": "C:\\Users\\HELLO\\My_Task\\My_Task\\Shared\\My_Task.Shared.csproj",
+        "projectPath": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Shared\\My_Task.Shared.csproj",
         "packagesPath": "C:\\Users\\HELLO\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HELLO\\My_Task\\My_Task\\Shared\\obj\\",
+        "outputPath": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HELLO\\AppData\\Roaming\\NuGet\\NuGet.Config",

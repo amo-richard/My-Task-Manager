@@ -199,15 +199,15 @@
       "mscorlib.dll": "sha256-t1RT9mknsQ54H+sVa1vtMhjv3D8ZjiAGoLzHvuIObPw=",
       "netstandard.dll": "sha256-5SHKPh1PcuJjq4lIo7ymdIyhb9d3++oMAjr46auhUSc=",
       "System.Private.CoreLib.dll": "sha256-eH+XIsCUG5oZ0k8AIzNtRLTCLiV\/8Zv0RFCPMsIkdYY=",
-      "My_Task.Shared.dll": "sha256-aPJvEPBr3wR9sGFp5pSskOjGXo7qUObzX+W7Otd2+3w=",
-      "My_Task.Client.dll": "sha256-uiK7UMtE0tKkMInhatmKAKnjsMJHg5ZSdkv4JpYsnMw="
+      "My_Task.Shared.dll": "sha256-Aga\/O0mqQRWBYOsqijQiU3jBiLhodeiMPaNzb+0Qnkw=",
+      "My_Task.Client.dll": "sha256-iIpn7XMWv45m32c95e9ok1\/2znCLI5QBU7KmLIIpm\/0="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "My_Task.Shared.pdb": "sha256-sBljASsh2XCnNBT08XMKfqby4KU4a7LfAH2IurN\/m7c=",
-      "My_Task.Client.pdb": "sha256-m78GO2On7Wg\/5\/MJ99uDaOnH2W2w2nRo48foeZ9nbO4="
+      "My_Task.Shared.pdb": "sha256-IuPm3YOO+J2lL4s78hlrTsJee3bukH8uCnjejJRUm20=",
+      "My_Task.Client.pdb": "sha256-pRB4kj0cXKzw8kjlomYI5nGaUQ+x19eBJCRRywJsjwk="
     },
     "runtime": {
       "dotnet.7.0.9.3aeeqz8sv3.js": "sha256-dUIY5Mz0ozZWqtTfBb7ArJKbdh5IIp8BXeq6UjK4u\/c=",

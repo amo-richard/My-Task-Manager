@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = My_Task.Shared
-build_property.ProjectDir = C:\Users\HELLO\My_Task\My_Task\Shared\
+build_property.ProjectDir = C:\Users\HELLO\My_Task\My-Task-Manager\My_Task\Shared\

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FRhlfmj4BpjP23A7bHelM9W65mjGmxHcLYpVAQzZ0dtK+DpHAoZP+Mg3FH4TirvTWQl+7KI4GDhoEVk/I4UbHw==",
+  "dgSpecHash": "JTnVioDEYY9UBytxKZeTMW93RN1fswDJpJvGn/qblHn7A0dhOpitWFl8p0PQWu7Ec0ZUEJI1JoHdhmsAayxUGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\My_Task.Client.csproj",
+  "projectFilePath": "C:\\Users\\HELLO\\My_Task\\My-Task-Manager\\My_Task\\Client\\My_Task.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HELLO\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.9\\microsoft.aspnetcore.authorization.7.0.9.nupkg.sha512",
     "C:\\Users\\HELLO\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.9\\microsoft.aspnetcore.components.7.0.9.nupkg.sha512",
