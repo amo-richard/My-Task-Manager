@@ -1,0 +1,202 @@
+.left-side[b-6mwwzn5diy] {
+    background-color: #2E2B3C;
+    height: 100vh;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.center-flex[b-6mwwzn5diy]{
+    justify-content:center !important;
+    align-items:center;
+}
+
+.hidable[b-6mwwzn5diy]{
+    height:0!important;
+    width:0!important;
+    font-size: 0!important;
+    z-index:-100!important;
+    margin:0 !important;
+    overflow:hidden;
+}
+
+.logo[b-6mwwzn5diy] {
+    position:relative;
+    display: flex;
+    align-items: center; 
+}
+
+.item-collapse[b-6mwwzn5diy]{
+    cursor:pointer;
+    transform:rotateY(180deg);
+    margin-left: 3rem;
+}
+
+.arrow-properties[b-6mwwzn5diy] {
+    position: absolute;
+    margin: 0 !important;
+    right: -1.8rem;
+    transform: rotateY(0deg);
+}
+
+.navigations[b-6mwwzn5diy] {
+    background-color: #242132;
+    border-radius: .5rem;
+    padding: 1rem .5rem;
+    margin-top: 2rem;
+}
+.nav-calendar[b-6mwwzn5diy], .nav-add[b-6mwwzn5diy], .nav-dashboard[b-6mwwzn5diy] {
+    border-radius: 10px;
+    /*padding: 8px;*/
+}
+
+.logo-icon[b-6mwwzn5diy] {
+    width: 35px !important;
+    height: 38.227px !important;
+}
+
+.nav[b-6mwwzn5diy],.logo[b-6mwwzn5diy]{
+    display:flex;
+    align-items:center;
+}
+
+.nav[b-6mwwzn5diy] {
+    cursor: pointer;
+    padding: 0 .5rem;
+}
+.nav + .nav[b-6mwwzn5diy]{
+    margin-top: .4rem;
+}
+.logo-text[b-6mwwzn5diy]{
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight:600;
+}
+.logo-text[b-6mwwzn5diy], .nav-text[b-6mwwzn5diy], .sub-nav[b-6mwwzn5diy] {
+    font-family: 'Microsoft Tai Le';
+    color: #BDB5E6;
+}
+.nav-text[b-6mwwzn5diy] {
+    font-size: .9rem;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+
+
+.projects-container[b-6mwwzn5diy]{
+    flex: 1;
+    margin-bottom: 1rem;
+}
+
+.sub-nav[b-6mwwzn5diy] {
+    flex: 1;
+    overflow: hidden;
+}
+.all-tasks[b-6mwwzn5diy] {
+    font-size: .9rem;
+    border-bottom: .02rem solid rgba(189, 181, 230,.2);
+    padding: 0 .5rem .5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: rgba(189, 181, 230,.5);
+}
+.sub-nav-projects-box + .sub-nav-projects-box[b-6mwwzn5diy] {
+    margin-top: .8rem;
+}
+
+.sub-nav-project-child[b-6mwwzn5diy] {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: inherit;
+    overflow: hidden;
+}
+
+.sub-nav-projects-box:hover .sub-nav-project-item[b-6mwwzn5diy] {
+    background-color: rgb(224, 0, 248,.2);
+}
+.sub-nav-projects-box:hover .nav-text[b-6mwwzn5diy]{
+    font-weight: bold;
+}
+.sub-nav-project-item[b-6mwwzn5diy] {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px .35rem inset #CF0DF6;
+    background-color: rgb(224, 0, 248,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    font-family: 'Yu Gothic UI';
+    line-height: 1;
+}
+
+.sub-nav-projects-box[b-6mwwzn5diy] {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0!important;
+    padding: .1rem 0;
+    border-radius: .5rem;
+    margin-left: 5%;
+}
+
+.top-nav .nav:hover[b-6mwwzn5diy] {
+    font-weight: bold;
+}
+
+.top-nav .nav.active[b-6mwwzn5diy] {
+    background-color: rgba(138,133,164,0.2);
+    backdrop-filter: blur(5px);
+}
+
+.settings[b-6mwwzn5diy] {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 8px;
+    background-color: #242132;
+    ;
+}
+
+.profile-container[b-6mwwzn5diy] {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 5px;
+    background-image: url("Sun.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: aliceblue;
+    position: relative;
+}
+
+.online-status[b-6mwwzn5diy] {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -1px;
+    right: -2px;
+}
+
+.details-settings p[b-6mwwzn5diy] {
+    line-height: 1;
+    font-size: .8rem;
+    font-family: 'Segoe UI Symbol';
+    color: #BDB5E6;
+    margin: 0;
+    margin-left: 5px;
+}
+
+    .details-settings p:last-child[b-6mwwzn5diy] {
+        color: whitesmoke;
+        opacity: 45%;
+    }
+
+.settings-icon[b-6mwwzn5diy] {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+}

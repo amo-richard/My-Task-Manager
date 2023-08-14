@@ -1,0 +1,12 @@
+C:\Users\HELLO\My_Task\My_Task\Shared\bin\Debug\net7.0\My_Task.Shared.deps.json
+C:\Users\HELLO\My_Task\My_Task\Shared\bin\Debug\net7.0\My_Task.Shared.dll
+C:\Users\HELLO\My_Task\My_Task\Shared\bin\Debug\net7.0\My_Task.Shared.pdb
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\My_Task.Shared.csproj.AssemblyReference.cache
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\My_Task.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\My_Task.Shared.AssemblyInfoInputs.cache
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\My_Task.Shared.AssemblyInfo.cs
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\My_Task.Shared.csproj.CoreCompileInputs.cache
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\My_Task.Shared.dll
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\refint\My_Task.Shared.dll
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\My_Task.Shared.pdb
+C:\Users\HELLO\My_Task\My_Task\Shared\obj\Debug\net7.0\ref\My_Task.Shared.dll

@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\obj\\Debug\\net7.0\\build-gz\\1ZbbdciR.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\obj\\Debug\\net7.0\\scopedcss\\bundle\\My_Task.Client.styles.css",
+      "PackagePath": "staticwebassets\\My_Task.Client.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\wwwroot\\NetworkStatus.js",
+      "PackagePath": "staticwebassets\\NetworkStatus.js"
+    },
+    {
+      "Id": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\wwwroot\\Sun.jpg",
+      "PackagePath": "staticwebassets\\Sun.jpg"
+    },
+    {
+      "Id": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\HELLO\\My_Task\\My_Task\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.My_Task.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.My_Task.Client.props",
+      "PackagePath": "build\\My_Task.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.My_Task.Client.props",
+      "PackagePath": "buildMultiTargeting\\My_Task.Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.My_Task.Client.props",
+      "PackagePath": "buildTransitive\\My_Task.Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

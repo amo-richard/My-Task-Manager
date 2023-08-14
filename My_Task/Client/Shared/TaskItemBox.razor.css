@@ -1,0 +1,153 @@
+﻿
+.item-container {
+    margin: 0 .2rem 1rem;
+    min-height: 10rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.item {
+    border-radius: .5rem;
+    background: #242132;
+    padding: .6rem;
+    line-height: 1;
+}
+
+.item-top {
+    display: flex;
+    color: #BDB5E6;
+    position: relative;
+    align-items: center;
+}
+
+    .item-top .item-name {
+        font-size: 1.45rem;
+        font-family: 'Microsoft Tai Le';
+        text-transform: capitalize;
+    }
+
+    .item-top .options {
+        margin-left: auto;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .item-top .options:hover {
+            background-color: rgba(164, 157, 201,.1);
+            cursor: pointer;
+        }
+
+.item-description {
+    font-size: .9rem;
+    color: #8A82AE;
+    font-family: 'Microsoft Sans Serif';
+    margin-top: .5rem;
+    line-height: 1.2;
+    margin-left: .2rem;
+}
+
+.special-info {
+    display: flex;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+.time-start {
+    color: #CF0DF6;
+    background-color: rgba(207,13,246,.2);
+}
+
+.time-end {
+    color: #0D0DF6;
+    background-color: rgba(13,13,246,.2);
+}
+
+.state {
+    font-family: 'Microsoft Sans Serif';
+    border-radius: 1.5rem;
+    padding: .5rem .8rem;
+    display: inline-block;
+    font-size: .75rem;
+}
+
+.time-end {
+    margin-left: .5rem;
+}
+
+.state.priority {
+    margin-left: auto;
+}
+
+.item-due-date {
+    margin-top: 1rem;
+    color: #CF0DF6;
+    background-color: rgba(207,13,246,.2);
+}
+
+.show-first-box, .show-second-box {
+    display: block !important;
+}
+.options-lists-first {
+    display: none;
+    right: 2rem;
+    position: absolute;
+    background-color: #413D54;
+    top: 2.2rem;
+    border-radius: .3rem;
+    z-index: 10 !important;
+    color: #BDB5E6;
+    font-family: Calibri;
+    padding: 1rem .5rem;
+    padding-right: 2rem;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.option {
+    padding-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option-logo{
+    margin-right: .5rem;
+    
+}
+
+.option-text {
+    font-size: 1.2rem;
+}
+
+.option p{
+    padding: 0;
+    margin: 0;
+}
+
+.progress-logo,.completed-logo,.to-do-logo{
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    border: .15rem solid #BDB5E6;
+}
+
+.progress-logo {
+    border: .15rem solid #0467fc;
+}
+.completed-logo {
+    border: .15rem solid #00fb4b;
+}
+
+
+.options-lists-second{
+    top: 7.5rem;
+    right: 5rem;
+    box-shadow: 0 0 2px darkgrey;
+    padding: .5rem;
+    font-size: 1rem;
+
+}

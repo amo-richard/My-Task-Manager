@@ -1,0 +1,153 @@
+﻿@using My_Task.Shared;
+@implements IDisposable;
+@inject ShowAddTask UpdateShow;
+@inject CreateTask createTask;
+
+
+@if (UpdateShow.AddTaskState)
+{
+    <div class="maintain">
+        <div class=" add-container">
+            <div class="close-add-item" @onclick="Close">
+               <svg xmlns="http://www.w3.org/2000/svg" width="13.536" height="13.536" viewBox="0 0 13.536 13.536">
+                  <g id="Close" transform="translate(-1318.232 -283.232)">
+                    <line id="Line_34" data-name="Line 34" x2="10" y2="10" transform="translate(1320 285)" fill="none" stroke="#bdb5e6" stroke-linecap="round" stroke-width="2.5"/>
+                    <line id="Line_35" data-name="Line 35" x2="10" y2="10" transform="translate(1320 295) rotate(-90)" fill="none" stroke="#bdb5e6" stroke-linecap="round" stroke-width="2.5"/>
+                  </g>
+                </svg>
+
+
+            </div>
+            <form class="add-category-container">
+                <div    class="container add-parent-container">
+                    <div class="field-name-small @HideCategory"><p>Task Category</p></div>
+                    <div class="cat-group group-box cat-special-group @HideCategory">
+                            <input type="text" required @bind="@TaskCat" class="box"/>
+                        <div class="box-small @RotateArrow" @onclick="ShowCategories">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18.828" height="10.828" viewBox="0 0 18.828 10.828">
+                                <g id="Arrow_collaps2" transform="translate(1.414 9.414) rotate(-90)" opacity="0.74">
+                                    <line id="Line_21" data-name="Line 21" x1="8" y1="8" transform="translate(0 8)" fill="none" stroke="#292929" stroke-linecap="round" stroke-width="2" />
+                                    <line id="Line_22" data-name="Line 22" x1="8" y2="8" transform="translate(0 0)" fill="none" stroke="#292929" stroke-linecap="round" stroke-width="2" />
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="categories @CategoryClass">
+                            @if(createTask.dbItems != null)
+                            {
+                                @foreach (String Category in createTask.FiltedTaskName)
+                                {
+                                    <li class="category-item" @onclick="@(()=>@TaskCat = @Category)">@Category</li>
+                                }
+                            }
+                        </div>
+                        </div>
+
+                        <div class="field-name-small hide-parent @ShowParent"><p>Task Parent</p></div>
+                    <div class="cat-group group-box hide-parent @ShowParent">
+                            <input type="text" @bind="@TaskP" class="box" disabled/>
+                        </div>
+
+
+                        <div class="field-name-small "><p>Task name</p></div>
+                        <input type="text" class="box" required @bind="@TaskName" />
+
+
+                        <div class="field-name-small description-text"><p>Task Description</p></div>
+                        <textarea @bind="@TaskDescription" required class="box description" cols="30" />
+
+                        <div class="subtask-option @HideSubtask">
+                            Subtasks
+                            <div class="subtask-option-inner" @onclick="ChangeClick">
+                                <div class="inner-circle @ClickClass"></div>
+                            </div>
+                            No Subtasks
+                        </div>
+
+                        <div class="date-container">
+                            <label class="field-name-small">
+                                Start Date
+                                <input type="date" @bind="@StartDate" />
+                            </label>
+                            <label class="field-name-small">
+                                Deadline
+                                <input type="date" @bind="@EndDate" />
+                            </label>
+                        </div>
+
+
+                        <div class="time-container date-container @ShrinkHeight" id="@TimeClass">
+                            <label class="field-name-small" id="@Shrink">
+                                Start time
+                                <div class="input-container" id="@Shrink">
+                                    <input type="time" id="@Shrink" @bind="@TaskTimeStart" />
+                                </div>
+                            </label>
+                            <label class="field-name-small" id="@Shrink">
+                                End time
+                                <div class="input-container">
+                                    <input type="time" id="@Shrink" @bind="@TaskTimeEnd" />
+                                </div>
+                            </label>
+                        </div>
+                </div>
+                    <div class="container add-child-continer parent">
+                    <div class="container child-slide-over add-child-continer" id="@ActivateSubTask"></div>
+                        <div class="viewbox child">
+                            <ol>
+                                @if (createTask.NewContent.Count != 0)
+                                {
+                                    @foreach (TaskItem Item in createTask.NewContent)
+                                    {
+                                        @if (Item.TaskItemParent == null)
+                                        {
+
+                                        <li class="parent-box adable-item first">
+                                            <div class="pre-box"></div><p>@Item.TaskItemName</p>
+                                        </li>
+                                        }
+                                        else
+                                        {
+                                            <li class="mother-box">
+                                                <li class="parent-child-guide"></li>
+                                                <li class="children adable-item">
+                                                    <div class="pre-box"></div><p>@Item.TaskItemName</p>
+                                                </li>
+                                            </li>
+                                        }
+
+                                    }
+                                }
+                            </ol>
+                        </div>
+                        <div class="viewbox button" @onclick="UpdateNewData">Add Item</div>
+                        <div class="button done-button">
+                            @error
+                        </div>
+                    </div>
+                   
+            </form>
+        </div>
+    </div>
+}
+@code{
+    private bool Show = false;
+    [Parameter] public string? TaskName { get; set; }
+    [Parameter] public string? TaskCat { get; set; }
+    [Parameter] public string? TaskDescription { get; set; }
+    [Parameter] public string? TaskP { get; set; } = null;
+
+    [Parameter] public DateOnly? StartDate { get; set; }
+
+    [Parameter] public DateOnly? EndDate { get; set; }
+
+    [Parameter] public TimeOnly? TaskTimeStart { get; set; }
+
+    [Parameter] public TimeOnly? TaskTimeEnd { get; set; }
+
+    [Parameter] public int NoSubtask { get; set; }
+    [Parameter] public bool IsCompeted { get; set; } = false;
+    [Parameter] public bool TAskItemRepeat { get; set; }
+    
+    
+}

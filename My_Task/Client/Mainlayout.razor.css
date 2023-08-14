@@ -1,0 +1,15 @@
+﻿.body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #242132;
+}
+
+.left-body {
+    flex: 1;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+}

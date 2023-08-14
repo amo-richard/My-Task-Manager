@@ -1,0 +1,161 @@
+﻿@page "/dashboard"
+@using My_Task.Client.Shared;
+@using My_Task.Shared;
+@inject CreateTask createTask;
+<div class="dashboard">
+    <div class="dashboard-top">
+        <div class="dashboard-top-filter">
+            <div class="year-month">
+                <p class="month">August</p>
+                <p class="year">@DateTime.Now.Year.ToString()</p>
+            </div>   
+        </div>   
+    </div>
+
+    <div class="today-tasks">
+        <h1 class="today-class-header">Today's Tasks</h1>
+
+        <div class="today-task-container">
+            <div class="task-column">
+                <div class="task-column-top">
+                    <div class="status-icon"></div>
+                    <p class="status-name">To Do</p>
+                    <p class="count">123</p>
+                </div>
+                <div class="task-column-tasks">
+                    @if (createTask.dbItems != null)
+                    {
+
+                    @foreach (TaskItem item in createTask.dbItems)
+                    {
+                        if (item != null && item.TaskItemStatus == 1)
+                        {
+                            <TaskItemBox TaskPriority=Convert.ToInt32(item.TaskItemPriority)>
+                                <TaskName>@item.TaskItemName</TaskName>
+                                <StartTime>@item.TaskItemStartTime</StartTime>
+                                <EndTime>@item.TaskItemEndTime</EndTime>
+                                <Describe>@item.TaskItemDescription</Describe>
+                                <EndDate>@item.TaskItemEnd</EndDate>
+                            </TaskItemBox>
+                        }
+                    }
+                        
+                    }
+                </div>
+            </div>
+            <div class="task-column">
+                <div class="task-column-top">
+                    <div class="status-icon progress"></div>
+                    <p class="status-name">To Do</p>
+                    <p class="count progress">123</p>
+                </div>
+                <div class="task-column-tasks">
+                    @if (createTask.dbItems != null)
+                    {
+
+                        @foreach (TaskItem item in createTask.dbItems)
+                        {
+                            if (item != null && item.TaskItemStatus == 2)
+                            {
+                                <TaskItemBox TaskPriority=Convert.ToInt32(item.TaskItemPriority)>
+                                    <TaskName>@item.TaskItemName</TaskName>
+                                    <StartTime>@item.TaskItemStartTime</StartTime>
+                                    <EndTime>@item.TaskItemEndTime</EndTime>
+                                    <Describe>@item.TaskItemDescription</Describe>
+                                    <EndDate>@item.TaskItemEnd</EndDate>
+                                </TaskItemBox>
+                            }
+                        }
+
+                    }
+                </div>
+            </div>
+            <div class="task-column">
+                <div class="task-column-top">
+                    <div class="status-icon done"></div>
+                    <p class="status-name">To Do</p>
+                    <p class="count done">123</p>
+                </div>
+                <div class="task-column-tasks">
+                    @if (createTask.dbItems != null)
+                    {
+
+                        @foreach (TaskItem item in createTask.dbItems)
+                        {
+                            if (item != null && item.IsCompeted)
+                            {
+                                <TaskItemBox TaskPriority=Convert.ToInt32(item.TaskItemPriority)>
+                                    <TaskName>@item.TaskItemName</TaskName>
+                                    <StartTime>@item.TaskItemStartTime</StartTime>
+                                    <EndTime>@item.TaskItemEndTime</EndTime>
+                                    <Describe>@item.TaskItemDescription</Describe>
+                                    <EndDate>@item.TaskItemEnd</EndDate>
+                                </TaskItemBox>
+                            }
+                        }
+
+                    }
+                </div>
+            </div>
+            
+            <div class="task-column last">
+                <div class="task-status">Task status</div>
+
+                <ol>
+                    
+                    @if (createTask.dbItems != null)
+                    {
+
+                        @foreach (TaskItem item in createTask.dbItems)
+                        {
+                        <div class="task-column-item">
+                            <li class="@((item.IsCompeted? "completed-task":""))">@item.TaskItemName</li>
+                            <div class="state-circle">
+                                <input type="checkbox" 
+                                    class="@((item.IsCompeted?"state-circle bolden":"state-circle"))"
+                                    @onchange="@(()=>CheckboxChecked(item))" />
+                            </div>
+                        </div>                       
+                        }
+
+                    }
+                </ol>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+@code{
+    string LineThrough = "";
+    string Bolden = "";
+    bool completed = false;
+
+    string error = "";
+
+    public void ToggleComplete()
+    {
+        completed = completed ? !completed : !completed;
+        Bolden = completed ? "bolden" : "";
+    }
+
+
+    [Inject] public HttpClient Http { get; set; }
+
+
+    public async Task CheckboxChecked(TaskItem Task)
+    {
+        Task.IsCompeted = !Task.IsCompeted;
+
+        string requestUri = $"api/TaskItems/{Task.TaskItemId}";
+        var response = await Http.PutAsJsonAsync<TaskItem>(requestUri, Task);
+
+        if (!response.IsSuccessStatusCode)
+        {
+            error = response.ReasonPhrase;
+        }
+    }
+}
+
+

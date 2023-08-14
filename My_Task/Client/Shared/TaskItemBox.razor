@@ -1,0 +1,178 @@
+﻿
+@using My_Task.Client.Services;
+
+@inject StyleLists style;
+
+<div class="item-container">
+    <div class="item">
+        <div class="item-top">
+
+            <div class="item-name">@TaskName</div>
+            <div class="options" @onclick="ShowOptions">
+                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="15" viewBox="0 0 3 15">
+                    <circle id="Ellipse_15" data-name="Ellipse 15" cx="1.5" cy="1.5" r="1.5" fill="#bdb5e6" />
+                    <circle id="Ellipse_16" data-name="Ellipse 16" cx="1.5" cy="1.5" r="1.5" transform="translate(0 6)" fill="#bdb5e6" />
+                    <circle id="Ellipse_17" data-name="Ellipse 17" cx="1.5" cy="1.5" r="1.5" transform="translate(0 12)" fill="#bdb5e6" />
+                </svg>
+            </div>
+            
+        </div>
+
+        <div class="special-info">
+            <div class="time-start state">@StartTime</div>
+
+            <div class="time-end state">@EndTime</div>
+            <div class="priority state"
+                 style="background-color:@style.Priority[TaskPriority - 1].BackgroundColor;color:@style.Priority[TaskPriority - 1].TextColor">
+
+                @style.Priority[TaskPriority - 1].FieldName
+
+            </div>
+        </div>
+        <div class="item-description">@Describe</div>
+        <div class="item-due-date state">Due Date: @EndDate</div>
+    </div>
+
+    <div class="options-lists-first @ShowBoxFirst">
+        <div class="option edit" @onclick="EditITem">
+            <span class="option-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15.533" height="20.194" viewBox="0 0 15.533 20.194">
+                    <g id="Group_305" data-name="Group 305" transform="matrix(-0.53, 0.848, -0.848, -0.53, 2211.837, -115.091)">
+                        <g id="Rectangle_391" data-name="Rectangle 391" transform="translate(1264 1800)" fill="none" stroke="#bdb5e6" stroke-width="1">
+                            <rect width="17.291" height="5.636" rx="1" stroke="none" />
+                            <rect x="0.5" y="0.5" width="16.291" height="4.636" rx="0.5" fill="none" />
+                        </g>
+                        <g id="Polygon_6" data-name="Polygon 6" transform="translate(1284.291 1800) rotate(90)" fill="none">
+                            <path d="M2.818,0,5.636,4H0Z" stroke="none" />
+                            <path d="M 2.818170070648193 1.389007806777954 L 1.542249202728271 3.200000047683716 L 4.094090938568115 3.200000047683716 L 2.818170070648193 1.389007806777954 M 2.818170070648193 0 L 5.636340141296387 4 L 0 4 L 2.818170070648193 0 Z" stroke="none" fill="#bdb5e6" />
+                        </g>
+                        <line id="Line_146" data-name="Line 146" x2="10" transform="translate(1266.5 1802.818)" fill="none" stroke="#bdb5e6" stroke-linecap="round" stroke-width="1" />
+                    </g>
+                </svg>
+
+            </span>
+            <p class="option-text">edit</p>
+        </div>
+        <div class="option progress" @onclick="ChangeStatus">
+            <span class="option-logo progress-logo"></span>
+            <p class="option-text">in progress</p>
+        </div>
+        <div class="option delete" @onclick="DeleteItem">
+            <span class="option-logo">
+                <svg id="Group_306" data-name="Group 306" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.837" height="14.059" viewBox="0 0 11.837 14.059">
+                    <defs>
+                        <clipPath id="clip-path">
+                            <rect id="Rectangle_392" data-name="Rectangle 392" width="11.837" height="14.059" fill="#bdb5e6" />
+                        </clipPath>
+                    </defs>
+                    <g id="Group_273" data-name="Group 273" clip-path="url(#clip-path)">
+                        <path id="Path_122" data-name="Path 122" d="M23.161,19.212V28.17a1.224,1.224,0,0,1-1.223,1.223h-4.5a1.224,1.224,0,0,1-1.223-1.223V19.212ZM24.373,18H15V28.17A2.435,2.435,0,0,0,17.435,30.6h4.5a2.435,2.435,0,0,0,2.435-2.435Z" transform="translate(-13.788 -16.546)" fill="#bdb5e6" />
+                        <path id="Path_123" data-name="Path 123" d="M.606,18.752a.606.606,0,0,1,0-1.212l10.625-.04a.606.606,0,1,1,0,1.212l-10.625.04Z" transform="translate(0 -16.086)" fill="#bdb5e6" />
+                        <path id="Path_124" data-name="Path 124" d="M43.777,2.343H38V1.251A1.252,1.252,0,0,1,39.251,0h3.275a1.252,1.252,0,0,1,1.251,1.251Zm-4.808-.97h3.838V1.251A.285.285,0,0,0,42.526.97H39.251a.285.285,0,0,0-.281.281Z" transform="translate(-34.93)" fill="#bdb5e6" />
+                        <path id="Path_125" data-name="Path 125" d="M46.566,58A.566.566,0,0,1,46,57.434V51.006a.566.566,0,0,1,1.131,0v6.428a.566.566,0,0,1-.566.566" transform="translate(-42.283 -46.365)" fill="#bdb5e6" />
+                        <path id="Path_126" data-name="Path 126" d="M87.379,58.644a.566.566,0,0,1-.566-.566V51.65a.566.566,0,0,1,1.131,0v6.428a.566.566,0,0,1-.566.566" transform="translate(-79.799 -46.956)" fill="#bdb5e6" />
+                    </g>
+                </svg>
+
+            </span>
+            <p class="option-text">delete</p>
+        </div>
+
+    </div>
+
+    <div class="options-lists-second options-lists-first @ShowBoxSecond">
+        
+        <div class="option" @onclick="ChangeToDO">
+            <span class="option-logo to-do-logo"></span>
+            <p class="option-text">to do</p>
+        </div>
+        <div class="option" @onclick="ChangeToProgress">
+            <span class="option-logo progress-logo"></span>
+            <p class="option-text">in progress</p>
+        </div>
+        <div class="option" @onclick="ChangeToCoplete">
+            <span class="option-logo completed-logo"></span>
+            <p class="option-text">completed</p>
+        </div>
+    </div>
+</div>
+
+@code{
+    [Parameter] public  RenderFragment? TaskName { get; set; }
+    [Parameter] public  RenderFragment? StartTime { get; set; } 
+    [Parameter] public  RenderFragment? EndTime { get; set; } 
+    [Parameter] public int TaskPriority { get; set; }
+    [Parameter] public int TaskStatus { get; set; }
+    [Parameter] public  RenderFragment? Describe { get; set; }
+    [Parameter] public  RenderFragment? EndDate { get; set; }
+    [Parameter] public  EventCallback? OpenBoxes { get; set; }
+
+
+    bool ShowFirstBox = false;
+    bool ShowSecondBox = false;
+    string ShowBoxFirst = "";
+    string ShowBoxSecond = "";
+
+
+    public void ShowOptions()
+    {
+        ShowFirstBox = ShowFirstBox ? !ShowFirstBox : !ShowFirstBox;
+        ShowBoxFirst = ShowFirstBox ? "show-first-box" : "";
+
+        if (ShowSecondBox)
+        {
+            ShowSecondBox = ShowSecondBox ? !ShowSecondBox : !ShowSecondBox;
+            ShowBoxSecond = ShowSecondBox ? "show-second-box" : "";
+        }
+
+    } 
+    public void TaskToDO()
+    {
+
+    }
+    public void DeleteItem()
+    {
+        ShowFirstBox = ShowFirstBox ? !ShowFirstBox : !ShowFirstBox;
+        ShowBoxFirst = ShowFirstBox ? "show-first-box" : "";
+    }
+
+    public void ChangeStatus()
+    {
+        ShowSecondBox = ShowSecondBox ? !ShowSecondBox : !ShowSecondBox;
+        ShowBoxSecond = ShowSecondBox ? "show-second-box" : "";
+
+    }
+
+    public void EditITem()
+    {
+
+    } 
+
+    public void ChangeToDO()
+    {
+        ShowFirstBox = ShowFirstBox ? !ShowFirstBox : !ShowFirstBox;
+        ShowBoxFirst = ShowFirstBox ? "show-first-box" : "";
+
+        ShowSecondBox = ShowSecondBox ? !ShowSecondBox : !ShowSecondBox;
+        ShowBoxSecond = ShowSecondBox ? "show-second-box" : "";
+    }
+
+    public void ChangeToProgress()
+    {
+        ShowFirstBox = ShowFirstBox ? !ShowFirstBox : !ShowFirstBox;
+        ShowBoxFirst = ShowFirstBox ? "show-first-box" : "";
+
+        ShowSecondBox = ShowSecondBox ? !ShowSecondBox : !ShowSecondBox;
+        ShowBoxSecond = ShowSecondBox ? "show-second-box" : "";
+    }
+
+    public void ChangeToCoplete()
+    {
+        ShowFirstBox = ShowFirstBox ? !ShowFirstBox : !ShowFirstBox;
+        ShowBoxFirst = ShowFirstBox ? "show-first-box" : "";
+
+        ShowSecondBox = ShowSecondBox ? !ShowSecondBox : !ShowSecondBox;
+        ShowBoxSecond = ShowSecondBox ? "show-second-box" : "";
+
+    }
+}

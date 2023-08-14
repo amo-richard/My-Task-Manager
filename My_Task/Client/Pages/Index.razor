@@ -1,0 +1,119 @@
+﻿@page "/"
+@using My_Task.Client.Shared;
+@using My_Task.Client.Services;
+@using My_Task.Client.Models;
+@using My_Task.Shared;
+@implements IDisposable;
+@inject DatabaseContent data;
+@inject CreateTask createTask;
+@inject StyleLists style;
+
+
+<div class="calendar">
+    <div class="calendar-top">
+        <div class="calendar-top-filter">
+            <div class="year-month">
+                <p class="month">August</p>
+                <p class="year">@DateTime.Now.Year.ToString()</p>
+            </div>
+            <!--    <div class="filter-count">
+                <p class="filter-count-description">Show</p>
+                <div class="filter-name">
+                    <p>This Week</p>
+                    <span class="show-filters">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19.544 12.544">
+                            <g id="Group_190" data-name="Group 190" transform="translate(-1829.728 -40.728)">
+                                <line id="Line_22" data-name="Line 22" y1="8" x2="8" transform="matrix(-0.174, 0.985, -0.985, -0.174, 1840.634, 43.755)" fill="none" stroke="#e4e4e4" stroke-linecap="round" stroke-width="2" />
+                                <line id="Line_110" data-name="Line 110" x2="8" y2="8" transform="matrix(0.174, 0.985, -0.985, 0.174, 1846.245, 42.366)" fill="none" stroke="#e4e4e4" stroke-linecap="round" stroke-width="2" />
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>-->
+        </div>
+        <div class="calendar-filter-dates @HideDates">
+            <div class="date-filter-dates @HideDates"></div>
+            <div class="hide-date-filter @DateCollapseArrow" @onclick="HideDateContent">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+                    <defs>
+                        <clipPath id="clip-path">
+                            <rect id="Rectangle_215" data-name="Rectangle 215" width="11.517" height="5.936" fill="none" />
+                        </clipPath>
+                    </defs>
+                    <g id="Ellipse_23" data-name="Ellipse 23" fill="#322088" stroke="#242132" stroke-width="4">
+                        <circle cx="17.5" cy="17.5" r="17.5" stroke="none" />
+                        <circle cx="17.5" cy="17.5" r="15.5" fill="none" />
+                    </g>
+                    <g id="Group_348" data-name="Group 348" transform="translate(14.032 23.486) rotate(-90)">
+                        <g id="Group_43" data-name="Group 43" transform="translate(0 0)" clip-path="url(#clip-path)">
+                            <path id="Path_41" data-name="Path 41" d="M10.524,2.53a.47.47,0,0,1,.222.684.556.556,0,0,1-.222.193L5.458,5.872a.626.626,0,0,1-.788-.193.451.451,0,0,1-.075-.245V.5A.545.545,0,0,1,5.174,0a.651.651,0,0,1,.283.064Z" transform="translate(0.697 0)" fill="#fffcfc" />
+                            <path id="Path_42" data-name="Path 42" d="M6.317,3.024h0a.78.78,0,0,1-.829.72H.829A.78.78,0,0,1,0,3.024.78.78,0,0,1,.829,2.3H5.488a.78.78,0,0,1,.829.72" transform="translate(0 0)" fill="#fffcfc" />
+                        </g>
+                    </g>
+                </svg>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="task-details-container @ModifyHeight">
+
+        @if(createTask.dbItems == null)
+        {
+            
+        }
+        <div class="task-category-main">
+                @if (createTask.dbItems != null)
+                {
+                    @foreach (string items in createTask.FiltedTaskName)
+                    {
+                        if (!string.IsNullOrEmpty(items))
+                        {
+                                    <div class="bar"></div>
+                                    <p class="item-cat">@items</p>
+
+                        }
+                    }
+                }
+                else
+                {
+                    <h2>@data.error</h2>
+                }
+    </div>
+<div class="task-container">
+    @if (createTask.dbItems != null)
+            {
+                <div class="task-content" style="grid-template-columns: repeat(@(createTask.FiltedTaskName.Count),1fr);">
+
+                    @foreach (string category in createTask.FiltedTaskName)
+                    {
+                        <div class="task-content-sub">
+                            @foreach (TaskItem item in createTask.dbItems)
+                            {
+                                if ((item != null) && (item.TaskItemCategory == category))
+                                {
+                                    <TaskItemBox TaskPriority=Convert.ToInt32(item.TaskItemPriority)>
+                                        <TaskName>@item.TaskItemName</TaskName>
+                                        <StartTime>@item.TaskItemStartTime</StartTime>
+                                        <EndTime>@item.TaskItemEndTime</EndTime>
+                                        <Describe>@item.TaskItemDescription</Describe>
+                                        <EndDate>@item.TaskItemEnd</EndDate>
+                                    </TaskItemBox>
+                                }
+                            }
+                        </div>
+                    }
+
+               
+            </div> 
+            }
+             
+</div>
+        <Details show="showDetails" OnClose="CloseDetails">
+            <ItemName>@DialogName</ItemName>
+            <Description>@DialogDescription</Description>
+            <FirstChar>@FirstLetter</FirstChar>
+        </Details>
+
+</div>
+</div>

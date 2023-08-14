@@ -1,0 +1,153 @@
+
+.item-container[b-9dlhywxk9w] {
+    margin: 0 .2rem 1rem;
+    min-height: 10rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.item[b-9dlhywxk9w] {
+    border-radius: .5rem;
+    background: #242132;
+    padding: .6rem;
+    line-height: 1;
+}
+
+.item-top[b-9dlhywxk9w] {
+    display: flex;
+    color: #BDB5E6;
+    position: relative;
+    align-items: center;
+}
+
+    .item-top .item-name[b-9dlhywxk9w] {
+        font-size: 1.45rem;
+        font-family: 'Microsoft Tai Le';
+        text-transform: capitalize;
+    }
+
+    .item-top .options[b-9dlhywxk9w] {
+        margin-left: auto;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+        .item-top .options:hover[b-9dlhywxk9w] {
+            background-color: rgba(164, 157, 201,.1);
+            cursor: pointer;
+        }
+
+.item-description[b-9dlhywxk9w] {
+    font-size: .9rem;
+    color: #8A82AE;
+    font-family: 'Microsoft Sans Serif';
+    margin-top: .5rem;
+    line-height: 1.2;
+    margin-left: .2rem;
+}
+
+.special-info[b-9dlhywxk9w] {
+    display: flex;
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+.time-start[b-9dlhywxk9w] {
+    color: #CF0DF6;
+    background-color: rgba(207,13,246,.2);
+}
+
+.time-end[b-9dlhywxk9w] {
+    color: #0D0DF6;
+    background-color: rgba(13,13,246,.2);
+}
+
+.state[b-9dlhywxk9w] {
+    font-family: 'Microsoft Sans Serif';
+    border-radius: 1.5rem;
+    padding: .5rem .8rem;
+    display: inline-block;
+    font-size: .75rem;
+}
+
+.time-end[b-9dlhywxk9w] {
+    margin-left: .5rem;
+}
+
+.state.priority[b-9dlhywxk9w] {
+    margin-left: auto;
+}
+
+.item-due-date[b-9dlhywxk9w] {
+    margin-top: 1rem;
+    color: #CF0DF6;
+    background-color: rgba(207,13,246,.2);
+}
+
+.show-first-box[b-9dlhywxk9w], .show-second-box[b-9dlhywxk9w] {
+    display: block !important;
+}
+.options-lists-first[b-9dlhywxk9w] {
+    display: none;
+    right: 2rem;
+    position: absolute;
+    background-color: #413D54;
+    top: 2.2rem;
+    border-radius: .3rem;
+    z-index: 10 !important;
+    color: #BDB5E6;
+    font-family: Calibri;
+    padding: 1rem .5rem;
+    padding-right: 2rem;
+    line-height: 1;
+    text-transform: capitalize;
+}
+
+.option[b-9dlhywxk9w] {
+    padding-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option-logo[b-9dlhywxk9w]{
+    margin-right: .5rem;
+    
+}
+
+.option-text[b-9dlhywxk9w] {
+    font-size: 1.2rem;
+}
+
+.option p[b-9dlhywxk9w]{
+    padding: 0;
+    margin: 0;
+}
+
+.progress-logo[b-9dlhywxk9w],.completed-logo[b-9dlhywxk9w],.to-do-logo[b-9dlhywxk9w]{
+    width: .9rem;
+    height: .9rem;
+    border-radius: 50%;
+    border: .15rem solid #BDB5E6;
+}
+
+.progress-logo[b-9dlhywxk9w] {
+    border: .15rem solid #0467fc;
+}
+.completed-logo[b-9dlhywxk9w] {
+    border: .15rem solid #00fb4b;
+}
+
+
+.options-lists-second[b-9dlhywxk9w]{
+    top: 7.5rem;
+    right: 5rem;
+    box-shadow: 0 0 2px darkgrey;
+    padding: .5rem;
+    font-size: 1rem;
+
+}
